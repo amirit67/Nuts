@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Nuts</string>
+
+    <string name="sendSms">کد تایید ۵ رقمی برای شماره %1$s ارسال شد</string>
+    <string name="title_shopping">سبد</string>
+    <string name="title_tag">تخفیف</string>
+    <string name="title_home">خانه</string>
+    <string name="title_book">مقالات</string>
+    <string name="title_profile">پروفایل</string>
+
+
+    <string name="navigation_about_us">درباره ما</string>
+    <string name="navigation_notification">پیام ها</string>
+    <string name="navigation_help">راهنمای اپلیکیشن</string>
+    <string name="navigation_support_contact_us">پشتیبانی</string>
+    <string name="navigation_exit">خروج از برنامه</string>
+    <string name="navigation_drawer_open">باز</string>
+    <string name="navigation_drawer_close">بسته</string>
+    <string name="title_favorite">علاقه مندی ها</string>
+</resources>

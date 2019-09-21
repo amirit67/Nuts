@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layoutDirection="ltr">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_top"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFAF66">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/ic_right_black"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/iransansbold"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:text="حساب کاربری"
+                    android:textColor="#B85D0A"
+                    android:textSize="16sp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent"
+                    card_view:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_login"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="کد تایید را وارد کنید"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="#3F3D56"
+        android:fontFamily="@font/iransansbold"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:textColor="#ADADAD"
+        android:text="@string/sendSms"
+        android:fontFamily="@font/iransansmedium"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@android:color/transparent"
+        android:layoutDirection="rtl"
+        android:textColorHint="#c5c5c5"
+        app:errorTextAppearance="@style/hint_error"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/textView10">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_unlock"
+            android:drawablePadding="8dp"
+            android:gravity="right"
+            android:hint="کد تایید"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:paddingTop="8dp"
+            android:textColor="#535461"
+            android:textCursorDrawable="@drawable/bg_input_cursor"
+            android:textSize="14sp"
+            app:errorTextAppearance="@style/hint_error" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/press_button"
+        android:enabled="false"
+        android:text="ارسال"
+        android:textSize="14sp"
+        android:textAppearance="@style/button1"
+        android:textColor="@color/white"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/iransansbold"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="#ADADAD"
+        android:text="شماره را اشتباه وارد کرده اید؟"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:drawableLeft="@drawable/ic_rotate"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/iransansmedium"
+        android:gravity="center"
+        android:text="ارسال مجدد"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/iransansmedium"
+        android:gravity="center"
+        android:text="05:32"
+        android:textColor="#535461"
+        android:textSize="12sp"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

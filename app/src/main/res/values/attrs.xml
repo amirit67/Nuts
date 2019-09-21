@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="amir">
+        <attr name="nvmIcon" format="reference" />
+        <attr name="nvmIconHeight" format="dimension" />
+        <attr name="nvmIconWith" format="dimension" />
+        <attr name="nvmTitle" format="string" />
+        <attr name="nvmTitleColor" format="reference" />
+        <attr name="nvmTitleGravity">
+            <enum name="CENTER" value="17" />
+            <enum name="LEFT" value="3" />
+            <enum name="RIGHT" value="5" />
+        </attr>
+        <attr name="nvmTitleHeight" format="dimension" />
+        <attr name="nvmTitleMarginBottom" format="dimension" />
+        <attr name="nvmTitleMarginLeft" format="dimension" />
+        <attr name="nvmTitleMarginRight" format="dimension" />
+        <attr name="nvmTitleMarginTop" format="dimension" />
+        <attr name="nvmTitleSize" format="dimension" />
+        <attr name="nvmTitleWith" format="dimension" />
+
+        <attr name="nvmType">
+            <enum name="NOTIFICATION" value="263" />
+            <enum name="WALLET" value="133" />
+            <enum name="STATISTIC" value="253" />
+            <enum name="CALL_ANSWER" value="223" />
+            <enum name="CONTACTS" value="203" />
+            <enum name="FAVORITE" value="123" />
+            <enum name="HELP" value="243" />
+            <enum name="MY_PROFILE_REPLAY_COMMENT" value="183" />
+            <enum name="NOTIFICATIONS" value="193" />
+            <enum name="TRANSACTION" value="300" />
+            <enum name="PRICE_LIST" value="213" />
+            <enum name="REQUEST_MASTER" value="163" />
+            <enum name="CONTACT_US" value="153" />
+            <enum name="USER_JOBS" value="113" />
+            <enum name="VACATION" value="173" />
+            <enum name="ABOUT_US" value="143" />
+            <enum name="BASKET" value="273" />
+            <enum name="EXIT" value="283" />
+            <enum name="GUIDE" value="293" />
+            <enum name="REGISTER_ADS" value="295" />
+        </attr>
+    </declare-styleable>
+</resources>

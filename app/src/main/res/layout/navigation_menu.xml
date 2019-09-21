@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/avatarCardView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/card_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_logo_gray" />
+            </androidx.cardview.widget.CardView>
+
+            <!--android:background="@drawable/shape_gradient_nav"-->
+
+            <TextView
+                android:id="@+id/txt_Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="right"
+                android:paddingTop="4dp"
+                android:text="نام و نام خانوادگی"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/avatarCardView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txt_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="right"
+                android:text="نام کاربری"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_Name" />
+
+            <!--android:layout_above="@+id/tvUserWallet"
+            android:layout_alignEnd="@+id/tvUserWallet"
+            android:layout_alignRight="@+id/tvUserWallet"-->
+
+            <!--  <Button
+                  android:id="@+id/tvUserWallet"
+                  android:layout_width="wrap_content"
+                  android:layout_height="22dp"
+                  android:layout_alignParentBottom="true"
+                  android:layout_alignParentEnd="true"
+                  android:layout_marginEnd="8dp"
+                  android:layout_marginTop="4.0dip"
+                  android:background="@color/transparent"
+                  android:paddingStart="4dp"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="8dp"
+                  android:paddingLeft="4dp"
+                  android:visibility="gone"
+                  android:text="اعتبـار: ۴۵,۰۰۰ تومـان"
+                  android:textColor="@color/colorAccent"
+                  android:textSize="7sp"
+                  android:textStyle="bold" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--<com.sanatyar.investam.utils.navigation.NavigationItemView
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#fff"
+            android:foreground="?android:selectableItemBackground"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:nvmIconHeight="32dp"
+            app:nvmIconWith="32dp"
+            app:nvmTitleColor="@color/textcolor_dafault"
+            app:nvmTitleGravity="LEFT"
+            app:nvmTitleMarginBottom="4dp"
+            app:nvmTitleMarginLeft="8dp"
+            app:nvmTitleSize="12sp"
+            app:nvmType="PRICE_LIST" />-->
+
+        <!-- <com.sanatyar.investam.utils.navigation.NavigationItemView
+             android:layout_width="fill_parent"
+             android:layout_height="55dp"
+             android:layout_gravity="start"
+             android:layout_marginBottom="4dp"
+             android:background="#fff"
+             android:orientation="vertical"
+             android:paddingTop="12dp"
+             app:nvmIconHeight="32dp"
+             app:nvmIconWith="32dp"
+             app:nvmTitleColor="@color/textcolor_dafault"
+             app:nvmTitleGravity="LEFT"
+             app:nvmTitleMarginBottom="4dp"
+             app:nvmTitleMarginLeft="12dp"
+             app:nvmTitleSize="12sp"
+             app:nvmType="VISIT_STATISTIC" />-->
+        <!---->
+
+        <com.example.nuts.utils.navigation.NavigationItemView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="start"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            app:nvmIconHeight="32dp"
+            app:nvmIconWith="32dp"
+            app:nvmTitleColor="@color/textcolor_dafault"
+            app:nvmTitleGravity="LEFT"
+            app:nvmTitleMarginBottom="4dp"
+            app:nvmTitleMarginLeft="8dp"
+            app:nvmTitleSize="12sp"
+            app:nvmType="CONTACT_US" />
+
+        <com.example.nuts.utils.navigation.NavigationItemView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="start"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            app:nvmIconHeight="32dp"
+            app:nvmIconWith="32dp"
+            app:nvmTitleColor="@color/textcolor_dafault"
+            app:nvmTitleGravity="LEFT"
+            app:nvmTitleMarginBottom="4dp"
+            app:nvmTitleMarginLeft="8dp"
+            app:nvmTitleSize="12sp"
+            app:nvmType="ABOUT_US" />
+
+        <com.example.nuts.utils.navigation.NavigationItemView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="start"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            app:nvmIconHeight="32dp"
+            app:nvmIconWith="32dp"
+            app:nvmTitleColor="@color/textcolor_dafault"
+            app:nvmTitleGravity="LEFT"
+            app:nvmTitleMarginBottom="4dp"
+            app:nvmTitleMarginLeft="8dp"
+            app:nvmTitleSize="12sp"
+            app:nvmType="NOTIFICATION" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray" />
+
+        <com.example.nuts.utils.navigation.NavigationItemView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="start"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            app:nvmIconHeight="32dp"
+            app:nvmIconWith="32dp"
+            app:nvmTitleColor="@color/textcolor_dafault"
+            app:nvmTitleGravity="LEFT"
+            app:nvmTitleMarginBottom="4dp"
+            app:nvmTitleMarginLeft="8dp"
+            app:nvmTitleSize="12sp"
+            app:nvmType="EXIT" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

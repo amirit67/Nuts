@@ -1,0 +1,8 @@
+<resources>
+
+    <!--@drawable/ic_favorite-->
+    <item name="nav_notification" type="drawable">@drawable/ic_messages</item>
+    <item name="nav_about_us" type="drawable">@drawable/ic_aboutus</item>
+    <item name="nav_exit" type="drawable">@drawable/ic_exit</item>
+    <item name="nav_support" type="drawable">@drawable/ic_phone</item>
+</resources>
