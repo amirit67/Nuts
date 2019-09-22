@@ -27,7 +27,7 @@ public class Login2Fragment extends Fragment {
         view.findViewById(R.id.btn_check_code).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentStack stack = new FragmentStack(getActivity(), getFragmentManager(), R.id.container);
+                FragmentStack stack = new FragmentStack(getActivity(), getFragmentManager(), R.id.container2);
                 stack.replace(new MainFragment());
             }
         });

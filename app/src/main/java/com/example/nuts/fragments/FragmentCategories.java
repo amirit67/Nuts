@@ -39,7 +39,7 @@ public class FragmentCategories extends Fragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.fragment_filter, container, false);
+        rootView = inflater.inflate(R.layout.fragment_categories, container, false);
         DeclareElements();
 
         return rootView;

@@ -71,7 +71,7 @@ public class FragmentStack {
 
         //String tag = indexToTag(fragmentTag);
         FragmentTransaction ftx = manager.beginTransaction();
-        if (!fragmentPopped && manager.findFragmentByTag(fragmentTag) == null) {
+        if (!fragmentPopped /*&& manager.findFragmentByTag(fragmentTag) == null*/) {
             ftx.addToBackStack(fragmentTag);
 
             ftx.setCustomAnimations(R.anim.slide_in_right,

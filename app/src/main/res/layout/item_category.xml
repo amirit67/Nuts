@@ -8,6 +8,8 @@
     android:paddingRight="10dp"
     app:cardElevation="6dp"
     app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="false"
+    app:cardPreventCornerOverlap="false"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 

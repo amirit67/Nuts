@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="cardview_shadow_start_color"  tools:override="true">#4CFF00</color>
+    <color name="cardview_shadow_end_color"  tools:override="true">#0005FF</color>
+
     <color name="colorPrimary">#FFAF66</color>
     <color name="colorPrimaryDark">#FFBD7F</color>
     <color name="colorAccent">#FF6813</color>
@@ -42,5 +46,8 @@
     <color name="colorGray">#ececec</color>
 
     <color name="Gray100">#adadad</color>
+
+
+
 
 </resources>
