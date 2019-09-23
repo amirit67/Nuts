@@ -12,10 +12,10 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatImageView;
+
 import com.example.nuts.MainActivity;
 import com.example.nuts.R;
-
-import androidx.appcompat.widget.AppCompatImageView;
 
 public class NavigationItemView extends LinearLayout implements OnClickListener {
     /* renamed from: a */

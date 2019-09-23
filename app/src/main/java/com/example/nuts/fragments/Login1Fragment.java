@@ -6,12 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+
 import com.example.nuts.FragmentStack;
 import com.example.nuts.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-
-import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,12 +31,11 @@ public class Login1Fragment extends Fragment {
         view.findViewById(R.id.btn_check_mobile).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(((TextInputEditText)view.findViewById(R.id.et_mobile)).getText().length() > 0) {
+                if (((TextInputEditText) view.findViewById(R.id.et_mobile)).getText().length() > 0) {
                     FragmentStack stack = new FragmentStack(getActivity(), getFragmentManager(), R.id.container);
                     stack.replace(new Login2Fragment());
-                }
-                else
-                    ((TextInputLayout)view.findViewById(R.id.textInputLayout_mobile)).setError("شماره موبایل را وارد نمایید");
+                } else
+                    ((TextInputLayout) view.findViewById(R.id.textInputLayout_mobile)).setError("شماره موبایل را وارد نمایید");
             }
         });
         return view;

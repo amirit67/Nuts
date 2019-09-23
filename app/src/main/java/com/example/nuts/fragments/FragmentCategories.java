@@ -6,15 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.nuts.DummyContent;
-import com.example.nuts.R;
-import com.example.nuts.adapter.FilterAdapter;
-import com.example.nuts.utils.navigation.ItemDecorationAlbumColumns2;
-
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
+import com.example.nuts.DummyContent;
+import com.example.nuts.R;
+import com.example.nuts.adapter.FilterAdapter;
+import com.example.nuts.utils.navigation.ItemDecorationAlbumColumns2;
 
 public class FragmentCategories extends Fragment implements View.OnClickListener {
 

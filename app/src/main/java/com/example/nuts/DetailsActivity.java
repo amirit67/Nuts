@@ -1,21 +1,16 @@
 package com.example.nuts;
 
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nuts.adapter.productAdapter;
-import com.example.nuts.fragments.Login1Fragment;
 import com.example.nuts.utils.navigation.C1769a;
 import com.example.nuts.utils.navigation.C1770b;
 

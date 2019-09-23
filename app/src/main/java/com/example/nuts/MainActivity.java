@@ -7,27 +7,63 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.nuts.fragments.FragmentCategories;
-import com.example.nuts.fragments.Login1Fragment;
-import com.example.nuts.utils.navigation.C1769a;
-import com.example.nuts.utils.navigation.C1770b;
-
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.nuts.eventBus.ShowNavigationEvent;
+import com.example.nuts.eventBus.ShowToolbarEvent;
+import com.example.nuts.fragments.Login1Fragment;
+import com.example.nuts.utils.navigation.C1769a;
+import com.example.nuts.utils.navigation.C1770b;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 public class MainActivity extends AppCompatActivity implements C1770b {
+
+    private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        final DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+        drawer = findViewById(R.id.drawer_layout);
+
+        FragmentStack stack = new FragmentStack(this, getSupportFragmentManager(), R.id.container);
+        stack.replace(new Login1Fragment());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_search, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        item.setChecked(false);
+        int id = item.getItemId();
+        if (id == R.id.action_search) {
+            Toast.makeText(this, "جستجو", 5000).show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void mo2351a(C1769a c1769a) {
+        Toast.makeText(this, "نویگیشن", 5000).show();
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onShowToolbarEvent(ShowToolbarEvent showToolbarEvent) {
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this, drawer, showToolbarEvent.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
@@ -50,47 +86,29 @@ public class MainActivity extends AppCompatActivity implements C1770b {
         };
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (drawer.isDrawerOpen(Gravity.RIGHT)) {
-                    drawer.closeDrawer(Gravity.RIGHT);
-                    //HSH.getInstance().hide(ActivityMain.this, navigationView);
-                } else {
-                    drawer.openDrawer(Gravity.RIGHT);
-                    // HSH.getInstance().display(ActivityMain.this, navigationView);
-                }
-            }
-        });
 
-        FragmentStack stack = new FragmentStack(this, getSupportFragmentManager(), R.id.container);
-        stack.replace(new Login1Fragment());
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_search, menu);
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        item.setChecked(false);
-        int id = item.getItemId();
-        if (id == R.id.action_search) {
-            Toast.makeText(this, "جستجو", 5000).show();
-            return true;
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onShowNavigationEvent(ShowNavigationEvent showNavigationEvent) {
+        if (drawer.isDrawerOpen(Gravity.RIGHT)) {
+            drawer.closeDrawer(Gravity.RIGHT);
+            //HSH.getInstance().hide(ActivityMain.this, navigationView);
+        } else {
+            drawer.openDrawer(Gravity.RIGHT);
+            // HSH.getInstance().display(ActivityMain.this, navigationView);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
 
     @Override
-    public void mo2351a(C1769a c1769a) {
-
-        Toast.makeText(this, "نویگیشن", 5000).show();
+    public void onStop() {
+        EventBus.getDefault().unregister(this);
+        super.onStop();
     }
 }

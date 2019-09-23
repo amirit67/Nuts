@@ -7,18 +7,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.nuts.DummyContent;
 import com.example.nuts.R;
 import com.example.nuts.adapter.SliderAdapter;
 import com.example.nuts.adapter.categoryAdapter;
 import com.example.nuts.adapter.productAdapter;
+import com.example.nuts.eventBus.ShowNavigationEvent;
+import com.example.nuts.eventBus.ShowToolbarEvent;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,6 +38,17 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_main, container, false);
+
+        final Toolbar toolbar = view.findViewById(R.id.toolbar);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        EventBus.getDefault().post(new ShowToolbarEvent(toolbar, true));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EventBus.getDefault().post(new ShowNavigationEvent());
+            }
+        });
+
 
         RecyclerView recyclerView = view.findViewById(R.id.rv_category);
         recyclerView.setLayoutManager(new /*RTL*/LinearLayoutManager(view.getContext(), RecyclerView.HORIZONTAL, false));
@@ -66,5 +83,6 @@ public class MainFragment extends Fragment {
 
         return view;
     }
+
 
 }
