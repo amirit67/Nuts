@@ -11,7 +11,10 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nuts.adapter.productAdapter;
 import com.example.nuts.fragments.Login1Fragment;
 import com.example.nuts.utils.navigation.C1769a;
 import com.example.nuts.utils.navigation.C1770b;
@@ -25,8 +28,10 @@ public class DetailsActivity extends AppCompatActivity implements C1770b {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FragmentStack stack = new FragmentStack(this, getSupportFragmentManager(), R.id.container);
-        stack.replace(new Login1Fragment());
+        RecyclerView recyclerView2 = findViewById(R.id.rv_similar_product);
+        recyclerView2.setLayoutManager(new /*RTL*/LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+        recyclerView2.setHasFixedSize(true);
+        recyclerView2.setAdapter(new productAdapter(DummyContent.ITEMS));
     }
 
 
@@ -52,7 +57,6 @@ public class DetailsActivity extends AppCompatActivity implements C1770b {
 
     @Override
     public void mo2351a(C1769a c1769a) {
-
         Toast.makeText(this, "نویگیشن", 5000).show();
     }
 }
