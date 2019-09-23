@@ -41,7 +41,9 @@ public class MainFragment extends Fragment {
 
         final Toolbar toolbar = view.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+
         EventBus.getDefault().post(new ShowToolbarEvent(toolbar, true));
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +56,6 @@ public class MainFragment extends Fragment {
         recyclerView.setLayoutManager(new /*RTL*/LinearLayoutManager(view.getContext(), RecyclerView.HORIZONTAL, false));
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(new categoryAdapter(DummyContent.ITEMS));
-
 
         RecyclerView recyclerView1 = view.findViewById(R.id.rv_top_selling);
         recyclerView1.setLayoutManager(new /*RTL*/LinearLayoutManager(view.getContext(), RecyclerView.HORIZONTAL, false));
