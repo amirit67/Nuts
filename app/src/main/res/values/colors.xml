@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <color name="cardview_shadow_start_color"  tools:override="true" tools:targetApi="23">#f0f0f0</color>
-    <color name="cardview_shadow_end_color"  tools:override="true" tools:targetApi="23">#f8f8f8</color>
+    <color name="cardview_shadow_start_color" tools:override="true" tools:targetApi="23">#f0f0f0
+    </color>
+    <color name="cardview_shadow_end_color" tools:override="true" tools:targetApi="23">#f8f8f8
+    </color>
+
+    <color name="shadow_view_foreground_color_light">#33ffffff</color>
+    <color name="shadow_view_default_shadow_color">#DCDDE0</color>
+    <color name="shadow_view_foreground_color_dark">#1f000000</color>
 
     <color name="colorPrimary">#FFAF66</color>
     <color name="colorPrimaryDark">#FFBD7F</color>
     <color name="colorAccent">#FF6813</color>
 
 
-    <color name="actionbar">#8fc800</color>
-    <color name="body_background">#e8e8e8</color>
-    <color name="body_background_green">#7EB56E</color>
-    <color name="server_status_bar">#2b2b2b</color>
-    <color name="title_gray">#434343</color>
-    <color name="bg_msg_you">#5eb964</color>
-    <color name="bg_msg_from">#e5e7eb</color>
-    <color name="msg_border_color">#a1a1a1</color>
-    <color name="bg_btn_join">#1e6258</color>
     <color name="bg_msg_input">#e8e8e8</color>
-    <color name="text_msg_input">#626262</color>
-    <color name="lblFromName">#777777</color>
-    <color name="lightGray">#CC0003</color>
 
-    <color name="border_color">#ffd1d1d1</color>
-    <color name="text_black">#ff505050</color>
-    <color name="text_grey">#ffacacac</color>
-    <color name="red_eghamat">#339fc4</color><!--ffff515b-->
-    <color name="text_search_main">#ffb0b0b0</color>
-    <color name="bold_text_color">#ff535353</color>
-    <color name="green_light_reserve">#ff5dc331</color>
+    <!--ffff515b-->
 
     <color name="white">#ffffffff</color>
     <color name="black">#000000</color>
@@ -38,16 +26,11 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorTheme">#FFAF66</color>
     <color name="colorThemeLight">#FFDAB8</color>
-    <color name="colorError">#FFAF66</color>
     <color name="colorError2">#FF7531</color>
-    <color name="google_red">#fbfb3a</color>
     <color name="textcolor_dafault">#000000</color>
-    <color name="color_red">#D32F2F</color>
     <color name="colorGray">#ececec</color>
 
     <color name="Gray100">#adadad</color>
-
-
 
 
 </resources>

@@ -2,12 +2,12 @@ package com.example.nuts;
 
 import android.app.Activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Alireza Eskandarpour Shoferi on 11/16/2017.

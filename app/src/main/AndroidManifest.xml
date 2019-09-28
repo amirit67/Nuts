@@ -14,7 +14,7 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name=".DetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">

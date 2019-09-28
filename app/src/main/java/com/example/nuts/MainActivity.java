@@ -7,13 +7,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import com.example.nuts.eventBus.ShowNavigationEvent;
 import com.example.nuts.eventBus.ShowToolbarEvent;
+import com.example.nuts.fragments.FragmentAddress;
 import com.example.nuts.fragments.Login1Fragment;
 import com.example.nuts.utils.navigation.C1769a;
 import com.example.nuts.utils.navigation.C1770b;
@@ -21,6 +17,10 @@ import com.example.nuts.utils.navigation.C1770b;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 public class MainActivity extends AppCompatActivity implements C1770b {
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements C1770b {
         drawer = findViewById(R.id.drawer_layout);
 
         FragmentStack stack = new FragmentStack(this, getSupportFragmentManager(), R.id.container);
-        stack.replace(new Login1Fragment());
+        stack.replace(new FragmentAddress());
     }
 
     @Override

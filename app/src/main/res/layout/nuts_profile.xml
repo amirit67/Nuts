@@ -246,9 +246,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
+                android:background="@color/white"
                 android:text="خروج از حساب کاربری"
                 android:textColor="@color/black"
-                android:background="@color/white"
                 card_view:layout_constraintEnd_toStartOf="@+id/imageView7"
                 card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toBottomOf="@+id/txt_change_password" />
