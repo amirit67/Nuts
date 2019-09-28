@@ -141,6 +141,13 @@
 
             </androidx.cardview.widget.CardView>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_add_address"
+                android:background="@drawable/ic_address_card"/>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listView"
                 android:layout_width="match_parent"
