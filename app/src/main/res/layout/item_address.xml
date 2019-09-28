@@ -39,7 +39,7 @@
             android:src="@drawable/ic_check" />
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -52,15 +52,15 @@
             app:layout_constraintTop_toTopOf="@+id/imageView11" />
 
         <TextView
-            android:id="@+id/textView26"
+            android:id="@+id/txt_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="استان البرز کرج گلشهر"
             android:textColor="#9d9d9d"
             android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView17"
-            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+            app:layout_constraintEnd_toEndOf="@+id/txt_name"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
 
         <View
             android:id="@+id/textView27"
@@ -70,10 +70,10 @@
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_address" />
 
         <TextView
-            android:id="@+id/textView29"
+            android:id="@+id/txt_zip_code"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -87,7 +87,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/txt_mobile"
             android:layout_width="wrap_content"
             android:layout_height="21dp"
             android:layout_marginTop="16dp"
@@ -100,27 +100,27 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView29" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_zip_code" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/img_edir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView32"
-            app:layout_constraintStart_toEndOf="@+id/imageView16"
-            app:layout_constraintTop_toTopOf="@+id/textView32"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_mobile"
+            app:layout_constraintStart_toEndOf="@+id/img_delete"
+            app:layout_constraintTop_toTopOf="@+id/txt_mobile"
             app:layout_constraintVertical_bias="0.444"
             android:src="@drawable/ic_edit" />
 
         <ImageView
-            android:id="@+id/imageView16"
+            android:id="@+id/img_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView32"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_mobile"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView32"
+            app:layout_constraintTop_toTopOf="@+id/txt_mobile"
             android:src="@drawable/ic_trash" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
