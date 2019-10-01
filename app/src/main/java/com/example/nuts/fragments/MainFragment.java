@@ -55,10 +55,10 @@ public class MainFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.rv_category);
         recyclerView.setLayoutManager(new /*RTL*/LinearLayoutManager(view.getContext(), RecyclerView.HORIZONTAL, false));
-        //recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(new categoryAdapter(DummyContent.ITEMS));
-        RecyclerSnapHelper snapHelper = new RecyclerSnapHelper();
-        snapHelper.attachToRecyclerView(recyclerView);
+       /* RecyclerSnapHelper snapHelper = new RecyclerSnapHelper();
+        snapHelper.attachToRecyclerView(recyclerView);*/
 
         RecyclerView recyclerView1 = view.findViewById(R.id.rv_top_selling);
         recyclerView1.setLayoutManager(new /*RTL*/LinearLayoutManager(view.getContext(), RecyclerView.HORIZONTAL, false));
@@ -75,7 +75,7 @@ public class MainFragment extends Fragment {
         SliderAdapter adapter = new SliderAdapter(getActivity());
         sliderView.setSliderAdapter(adapter);
         sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-        sliderView.setSliderTransformAnimation(SliderAnimations.FADETRANSFORMATION);
+        sliderView.setSliderTransformAnimation(SliderAnimations.CLOCK_SPINTRANSFORMATION);
         sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
         sliderView.setIndicatorSelectedColor(Color.WHITE);
         sliderView.setIndicatorUnselectedColor(Color.GRAY);

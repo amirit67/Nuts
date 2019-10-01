@@ -104,4 +104,17 @@
     <style name="CustomTabLayout1" parent="Widget.Design.TabLayout">
         <item name="tabBackground">@drawable/tab_color_selector</item>
     </style>
+
+
+    <style name="TextInputLayoutAppearance" parent="Widget.Design.TextInputLayout">
+        <item name="android:background">#fff</item>
+        <item name="android:textColorHint">#c5c5c5</item>
+        <item name="errorTextAppearance">@style/hint_error</item>
+        <item name="android:textColor">@android:color/black</item>
+
+    </style>
+
+    <style name="tabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>

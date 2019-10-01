@@ -53,25 +53,7 @@ public class ActivityFilterCategory extends AppCompatActivity {
             }
         });
         tabLayout.setupWithViewPager(mViewPager);
-
-
-        int betweenSpace = 30;
-        ViewGroup slidingTabStrip = (ViewGroup) tabLayout.getChildAt(0);
-        int cnt = slidingTabStrip.getChildCount();
-        for (int i=0; i<cnt; i++) {
-            View v = slidingTabStrip.getChildAt(i);
-            ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
-            params.topMargin = betweenSpace;
-            params.bottomMargin = betweenSpace;
-            params.rightMargin = betweenSpace;
-        }
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                mViewPager.setCurrentItem(feed.size() - 1/* - Integer.parseInt(getIntent().getExtras().getString("position"))*/);
-            }
-        },250);
-        //
+        mViewPager.setCurrentItem(feed.size() - 1/* - Integer.parseInt(getIntent().getExtras().getString("position"))*/);
 
 
     }

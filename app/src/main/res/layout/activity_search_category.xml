@@ -39,8 +39,9 @@
                 app:tabMode="scrollable"
                 app:tabSelectedTextColor="@color/white"
                 app:tabTextColor="@color/Gray100"
-                style="@style/CustomTabLayout1"
-                app:tabTextAppearance="@style/CustomTabLayout"/>
+                app:tabTextAppearance="@style/CustomTabLayout"
+                app:tabBackground="@drawable/tab_color_selector"
+                app:tabRippleColor="#1A1169EE"/>
 
             <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/toolbar_top"

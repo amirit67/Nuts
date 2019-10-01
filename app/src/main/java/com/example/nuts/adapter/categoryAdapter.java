@@ -35,6 +35,12 @@ public class categoryAdapter extends RecyclerView.Adapter<categoryAdapter.ViewHo
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.bindTo(holder.mItem);
+
+
+         /*if(position == 0) {
+             ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.itemView.getLayoutParams();
+             params.rightMargin = -60;
+         }*/
     }
 
     @Override
