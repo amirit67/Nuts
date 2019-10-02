@@ -6,12 +6,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageView
+    <com.example.nuts.utils.roundedimageview.RoundedImageView
         android:id="@+id/img_product"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:src="@mipmap/keshmesh"
+        app:riv_corner_radius_bottom_right="0dp"
+        app:riv_corner_radius_bottom_left="0dp"
+        app:riv_corner_radius_top_right="10dp"
+        app:riv_corner_radius_top_left="10dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,13 +62,16 @@
             android:id="@+id/txt_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:ellipsize="end"
             android:fontFamily="@font/iransansbold"
+            android:maxLines="1"
             android:text="کشمش لویی"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView

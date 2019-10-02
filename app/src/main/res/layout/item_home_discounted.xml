@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@mipmap/shadow"
     android:clipToPadding="false"
+    android:layout_margin="8dp"
     app:layout_constraintEnd_toStartOf="@+id/rv_category"
     app:layout_constraintStart_toEndOf="@+id/rv_category"
     app:layout_constraintTop_toBottomOf="@+id/rv_category">

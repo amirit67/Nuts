@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.nuts.DummyContent;
 import com.example.nuts.R;
+import com.example.nuts.utils.roundedimageview.RoundedImageView;
 
 import java.util.List;
 
@@ -45,7 +46,7 @@ public class productAdapter extends RecyclerView.Adapter<productAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public DummyContent.DummyItem mItem;
-        ImageView imgProduct;
+        RoundedImageView imgProduct;
         TextView txtTitle;
 
         public ViewHolder(View view) {
