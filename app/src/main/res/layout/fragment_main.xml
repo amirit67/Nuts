@@ -270,7 +270,7 @@
                         android:layout_marginRight="8dp"
                         android:text="تحویل فوری"
                         android:textColor="@color/colorText"
-                        android:textSize="10sp"
+                        android:textSize="9sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
@@ -309,7 +309,7 @@
                         android:layout_marginRight="8dp"
                         android:text="کمترین قیمت"
                         android:textColor="@color/colorText"
-                        android:textSize="10sp"
+                        android:textSize="9sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
@@ -348,7 +348,7 @@
                         android:layout_marginRight="8dp"
                         android:text="پرداخت ایمن"
                         android:textColor="@color/colorText"
-                        android:textSize="10sp"
+                        android:textSize="9sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
@@ -389,7 +389,7 @@
                         android:layout_marginRight="8dp"
                         android:text="تضمین کیفیت"
                         android:textColor="@color/colorText"
-                        android:textSize="10sp"
+                        android:textSize="9sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
