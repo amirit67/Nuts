@@ -164,7 +164,7 @@
                     android:layout_marginTop="32dp"
                     android:drawableLeft="@drawable/ic_chevron_left"
                     android:text="نمایش همه"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="#FF6813"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -211,7 +211,7 @@
                         android:layout_marginTop="16dp"
                         android:drawableLeft="@drawable/ic_chevron_left"
                         android:text="نمایش همه"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="#FF6813"
                         android:textSize="12sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
