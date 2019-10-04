@@ -151,7 +151,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
-                        android:background="@drawable/rounded_gray"
+                        android:background="@drawable/rounded_gray_solid"
                         android:drawableLeft="@drawable/ic_support"
                         android:drawablePadding="6dp"
                         android:fontFamily="@font/iransansmedium"

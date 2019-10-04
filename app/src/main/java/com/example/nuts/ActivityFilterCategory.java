@@ -1,15 +1,19 @@
 package com.example.nuts;
 
 
+import android.app.AlertDialog;
 import android.app.AppComponentFactory;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import com.example.nuts.adapter.FilterAdapter;
 import com.example.nuts.adapter.FilterCategoryAdapter;
+import com.example.nuts.fragments.SubCategoryFragment;
 import com.example.nuts.utils.navigation.ItemDecorationAlbumColumns2;
 import com.google.android.material.tabs.TabLayout;
 
@@ -32,6 +36,7 @@ public class ActivityFilterCategory extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
     private TabLayout tabLayout;
+    private static Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,35 +61,6 @@ public class ActivityFilterCategory extends AppCompatActivity {
         mViewPager.setCurrentItem(feed.size() - 1/* - Integer.parseInt(getIntent().getExtras().getString("position"))*/);
 
 
-    }
-
-    public static class SubCategoryFragment extends Fragment {
-
-
-        public RecyclerView rv;
-        private FilterCategoryAdapter adapter;
-        private LinearLayoutManager layoutManager;
-        private View rootView = null;
-
-        @SuppressWarnings("deprecation")
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-
-            if (rootView == null) {
-                rootView = inflater.inflate(R.layout.fragment_categories, container, false);
-                rv = rootView.findViewById(R.id.listView);
-                layoutManager = new LinearLayoutManager(getActivity());
-                rv.addItemDecoration(new ItemDecorationAlbumColumns2(rv.getContext(), 1));
-                StaggeredGridLayoutManager lmanager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-                rv.setLayoutManager(lmanager);
-                rv.setHasFixedSize(true);
-                int pos = getArguments().getInt("pos");
-                //adapter = new FilterCategoryAdapter(getActivity(), feed, pos);
-                //rv.setAdapter(adapter);
-                rv.setAdapter(new FilterCategoryAdapter(DummyContent.ITEMS));
-            }
-            return rootView;
-        }
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
