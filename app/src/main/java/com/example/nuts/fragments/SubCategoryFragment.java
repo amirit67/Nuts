@@ -3,10 +3,12 @@ package com.example.nuts.fragments;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.nuts.ActivityFilterCategory;
 import com.example.nuts.DummyContent;
@@ -53,6 +55,12 @@ public class SubCategoryFragment extends Fragment implements View.OnClickListene
                     dialog.setCancelable(false);
                     dialog.setContentView(R.layout.dialog_advane_search);
 
+                    Window window = dialog.getWindow();
+                    ViewGroup.LayoutParams params = window.getAttributes();
+                    params.width = WindowManager.LayoutParams.MATCH_PARENT;
+                    params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                    window.setAttributes((WindowManager.LayoutParams) params);
+                    window.setGravity(Gravity.CENTER);
                     dialog.show();
                 }
             });
