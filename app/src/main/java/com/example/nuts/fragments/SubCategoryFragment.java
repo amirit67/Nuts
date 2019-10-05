@@ -2,6 +2,7 @@ package com.example.nuts.fragments;
 
 
 import android.app.Dialog;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -57,6 +58,7 @@ public class SubCategoryFragment extends Fragment implements View.OnClickListene
 
                     Window window = dialog.getWindow();
                     ViewGroup.LayoutParams params = window.getAttributes();
+                    window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
                     params.width = WindowManager.LayoutParams.MATCH_PARENT;
                     params.height = WindowManager.LayoutParams.WRAP_CONTENT;
                     window.setAttributes((WindowManager.LayoutParams) params);

@@ -25,39 +25,6 @@
         <item name="android:fontFamily">@font/iransansmedium</item>
     </style>
 
-
-    /////////////////////////////////////////////////////////////////////////
-
-
-    /////////////////////////////Button Style/////////////////////////////////
-
-
-    <!-- &lt;!&ndash; Dark Buttons &ndash;&gt;
-    <style name="ThemeOverlay.MyDarkButton" parent="ThemeOverlay.AppCompat.Dark">
-        <item name="colorButtonNormal">@color/colorAccent</item>
-        <item name="android:layout_marginRight">4dp</item>
-        <item name="android:background">@drawable/buttonshape</item>
-        <item name="android:layout_marginLeft">4dp</item>
-        <item name="android:textColor">@android:color/white</item>
-    </style>-->
-
-    <!--<style name="ll_bottom">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/txt_background_intro</item>
-        <item name="android:clickable">true</item>
-        <item name="android:drawablePadding">5dp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:onClick">onClick</item>
-        <item name="android:paddingTop">5dp</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:textColor">#aeaeae</item>
-        <item name="android:textSize">10sp</item>
-        <item name="android:fontFamily">@font/iransansmedium</item>
-    </style>-->
-
-
     <style name="hint_error">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/colorError2</item>
@@ -74,11 +41,6 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textStyle">bold</item>
     </style>
-
-    <!--<style name="body3">
-    <item name="android:textSize">14sp</item>
-    <item name="android:textColor">@color/colorGray</item>
-    </style>-->
 
     <style name="ProfileItem">
         <item name="android:layout_width">0dp</item>
