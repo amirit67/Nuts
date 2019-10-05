@@ -32,8 +32,9 @@
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="6dp"
                 android:layout_weight="1"
+                android:background="@mipmap/shadow"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="10dp">
+                app:cardElevation="0dp">
 
                 <TextView
                     android:id="@+id/textView11"
@@ -55,8 +56,9 @@
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
+                android:background="@mipmap/shadow"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="10dp">
+                app:cardElevation="0dp">
 
                 <TextView
                     android:id="@+id/textView8"

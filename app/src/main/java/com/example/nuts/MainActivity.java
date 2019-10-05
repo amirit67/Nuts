@@ -1,5 +1,6 @@
 package com.example.nuts;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
@@ -14,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.nuts.eventBus.ShowNavigationEvent;
 import com.example.nuts.eventBus.ShowToolbarEvent;
+import com.example.nuts.fragments.MainFragment;
 import com.example.nuts.fragments.ProfileFragment;
 import com.example.nuts.utils.navigation.C1769a;
 import com.example.nuts.utils.navigation.C1770b;
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements C1770b {
             @Override
             public void run() {
                 FragmentStack stack = new FragmentStack(MainActivity.this, getSupportFragmentManager(), R.id.container);
-                stack.replace(new ProfileFragment());
+                stack.replace(new MainFragment());
             }
         }, 100);
 
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements C1770b {
         item.setChecked(false);
         int id = item.getItemId();
         if (id == R.id.action_search) {
-            Toast.makeText(this, "جستجو", 5000).show();
+            startActivity(new Intent(this, ActivityFilterCategory.class));
             return true;
         }
         return super.onOptionsItemSelected(item);

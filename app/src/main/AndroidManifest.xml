@@ -16,6 +16,10 @@
         <activity
             android:name=".ActivityFilterCategory"
             android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
             <intent-filter>
