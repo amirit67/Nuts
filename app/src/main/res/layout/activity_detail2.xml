@@ -240,12 +240,11 @@
                 <TextView
                     android:id="@+id/txt_price"
                     android:layout_width="wrap_content"
-                    android:layout_height="14dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="200 هزارتومان"
                     android:textColor="@color/black"
                     android:textSize="10sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView28"
                     app:layout_constraintStart_toEndOf="@+id/txt_price_after_discount"
                     app:layout_constraintTop_toTopOf="@+id/textView28" />
 
@@ -285,30 +284,45 @@
                     app:layout_constraintTop_toTopOf="@+id/txt_discount" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
+            <FrameLayout
                 android:id="@+id/rv_price"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:cacheColorHint="@android:color/transparent"
-                android:clipToPadding="false"
-                android:divider="@null"
-                android:dividerHeight="5dp"
-                android:fadingEdgeLength="5dp"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/shadow"
                 android:gravity="right"
-                android:headerDividersEnabled="false"
                 android:layoutDirection="rtl"
-                android:listSelector="@android:color/transparent"
-                android:nestedScrollingEnabled="false"
-                android:orientation="horizontal"
                 android:paddingTop="8dp"
-                android:paddingBottom="16dp"
                 app:layout_constraintBottom_toTopOf="@+id/cardView4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView3"
-                tools:listitem="@layout/item_home_category" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteY="8dp">
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="260dp"
+                        android:text="TextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="30dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </FrameLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cardView4"
