@@ -311,9 +311,9 @@
                 tools:listitem="@layout/item_home_category" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardView4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/cardView4"
                 android:background="@mipmap/shadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -323,31 +323,33 @@
                     android:id="@+id/textView31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
 
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
                     android:text="نظرات مشتریان"
                     android:textColor="#adadad"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="@+id/textView30"
                     app:layout_constraintEnd_toStartOf="@+id/textView30"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/textView30" />
+
 
                 <TextView
                     android:id="@+id/textView30"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
                     android:background="@drawable/rounded_gray_solid"
                     android:gravity="center"
                     android:text="مشخصات"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView47"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView31"
                     app:layout_constraintTop_toTopOf="parent" />
-
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -521,6 +523,20 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="شرح کالا"
+                    android:textColor="#adadad"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView30"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView30"
+                    app:layout_constraintTop_toTopOf="@+id/textView30" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
