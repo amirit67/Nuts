@@ -59,10 +59,10 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
         recyclerView2.setHasFixedSize(true);
         recyclerView2.setAdapter(new productAdapter(DummyContent.ITEMS));
 
-        RecyclerView recyclerView3 = findViewById(R.id.rv_price);
-        recyclerView3.setLayoutManager(new /*RTL*/LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+        /*RecyclerView recyclerView3 = findViewById(R.id.rv_price);
+        recyclerView3.setLayoutManager(new *//*RTL*//*LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         recyclerView3.setHasFixedSize(true);
-        recyclerView3.setAdapter(new priceAdapter(this, DummyContent.ITEMS));
+        recyclerView3.setAdapter(new priceAdapter(this, DummyContent.ITEMS));*/
 
         RatingReviews ratingReviews = findViewById(R.id.rating_reviews);
 
