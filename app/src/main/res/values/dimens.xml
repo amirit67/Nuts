@@ -3,4 +3,8 @@
 
     <dimen name="design_bottom_navigation_text_size" tools:override="true">9sp</dimen>
     <dimen name="design_bottom_navigation_active_text_size" tools:override="true">11sp</dimen>
+
+
+    <dimen name="prb_symbolic_tick_default_text_size">15.0sp</dimen>
+    <dimen name="prb_drawable_tick_default_spacing">1.0dip</dimen>
 </resources>

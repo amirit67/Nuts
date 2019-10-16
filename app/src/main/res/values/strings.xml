@@ -17,4 +17,7 @@
     <string name="title_favorite">علاقه مندی ها</string>
     <string name="less">بستن</string>
     <string name="more">ادامه مطلب</string>
+
+
+    <string name="prb_default_symbolic_string">$</string>
 </resources>

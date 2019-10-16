@@ -285,30 +285,55 @@
                     app:layout_constraintTop_toTopOf="@+id/txt_discount" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_price"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cs_weight"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:cacheColorHint="@android:color/transparent"
-                android:clipToPadding="false"
-                android:divider="@null"
-                android:dividerHeight="5dp"
-                android:fadingEdgeLength="5dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/shadow"
                 android:gravity="right"
-                android:headerDividersEnabled="false"
-                android:layoutDirection="rtl"
-                android:listSelector="@android:color/transparent"
-                android:nestedScrollingEnabled="false"
                 android:orientation="horizontal"
-                android:paddingTop="8dp"
-                android:paddingBottom="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/cardView4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView3"
-                tools:listitem="@layout/item_home_category" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                <EditText
+                    android:id="@+id/textView48"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/transparent"
+                    android:hint="وزن دلخواه را وارد کنید"
+                    android:textColor="@color/black"
+                    android:textColorHint="#ACACAC"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView49"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.682" />
+
+                <View
+                    android:id="@+id/textView49"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:background="#ECECEC"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView50"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginStart="16dp"
+                    android:text="کیلوگرم"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cardView4"
@@ -317,7 +342,7 @@
                 android:background="@mipmap/shadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rv_price">
+                app:layout_constraintTop_toBottomOf="@+id/cs_weight">
 
                 <TextView
                     android:id="@+id/textView31"
