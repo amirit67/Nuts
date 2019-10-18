@@ -53,10 +53,10 @@ public class RatingReviews extends FrameLayout {
     private int mBarDimension;
     private int mBarTextSize;
     private int mBarColor;
-    private int mBarMaxValue;
+    private int mBarMaxValue = 100;
     private int mStyle;
     private int mNumOfBars;
-    private boolean isRoundCorner;
+    private boolean isRoundCorner = true;
 
     private boolean isBarAdded = false;
     private boolean isShowLabel = true;
@@ -88,16 +88,16 @@ public class RatingReviews extends FrameLayout {
 
         mStyle = a.getInt(R.styleable.RatingReviews_style, 1);
         mBarDimension = a.getDimensionPixelSize(R.styleable.RatingReviews_width,
-                (int) Utils.convertDpToPixel(20, mCtx));
+                (int) Utils.convertDpToPixel(15, mCtx));
         mBarColor = a.getColor(R.styleable.RatingReviews_color, Utils.DEFAULT_BAR_COLOR);
         mBarTextSize = (int) Utils.convertPixelsToDp(
                 a.getDimensionPixelSize(R.styleable.RatingReviews_text_size,
-                        (int) Utils.convertDpToPixel(15, mCtx)), mCtx);
+                        (int) Utils.convertDpToPixel(12, mCtx)), mCtx);
         mBarTextColor = a.getColor(R.styleable.RatingReviews_text_color, Utils.DEFAULT_BAR_TEXT_COLOR);
         mBarMaxValue = a.getInt(R.styleable.RatingReviews_max_value, 0);
         mBarSpaces = a.getDimensionPixelSize(R.styleable.RatingReviews_spaces,
                 (int) Utils.convertDpToPixel(Utils.DEFAULT_BAR_SPACE, mCtx));
-        isRoundCorner = a.getBoolean(R.styleable.RatingReviews_rounded, false);
+        isRoundCorner = a.getBoolean(R.styleable.RatingReviews_rounded, true);
 
         isShowLabel = a.getBoolean(R.styleable.RatingReviews_show_label, true);
         isShowRaters = a.getBoolean(R.styleable.RatingReviews_show_raters, true);
