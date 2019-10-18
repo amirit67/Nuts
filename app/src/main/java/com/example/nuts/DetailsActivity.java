@@ -10,16 +10,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nuts.adapter.SliderAdapter;
+import com.example.nuts.adapter.priceAdapter;
 import com.example.nuts.adapter.productAdapter;
+import com.example.nuts.utils.ExpandableTextView;
 import com.example.nuts.utils.navigation.C1769a;
 import com.example.nuts.utils.navigation.C1770b;
+import com.example.nuts.utils.reviewratings.BarLabels;
+import com.example.nuts.utils.reviewratings.RatingReviews;
 import com.google.android.material.tabs.TabLayout;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
+
+import java.util.Random;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -28,8 +35,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class DetailsActivity extends AppCompatActivity implements C1770b, View.OnClickListener {
 
-    //public TextView txtMore;
-    //public ExpandableTextView txtDesc;
+    public TextView txtMore;
+    public ExpandableTextView txtDesc;
+
     public TabLayout tabLayout;
     public LinearLayout csProperties;
     public LayoutInflater inflater;
@@ -42,9 +50,6 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
         setSupportActionBar(toolbar);
 
         inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        //txtDesc = findViewById(R.id.showDesc);
-        //txtMore = findViewById(R.id.txtMore);
-        //txtMore.setOnClickListener(this);
         csProperties = findViewById(R.id.cs_properties);
         tabLayout = findViewById(R.id.tablayout);
         tabLayout.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
@@ -59,6 +64,23 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
                     layoutParams.gravity = Gravity.CENTER_VERTICAL;
                     view.setLayoutParams(layoutParams);
                     csProperties.addView(view);
+
+                    RatingReviews ratingReviews = view.findViewById(R.id.rating_reviews);
+                    int colors[] = new int[]{
+                            Color.parseColor("#0e9d58"),
+                            Color.parseColor("#bfd047"),
+                            Color.parseColor("#ffc105"),
+                            Color.parseColor("#ef7e14"),
+                            Color.parseColor("#d36259")};
+
+                    int raters[] = new int[]{
+                            new Random().nextInt(100),
+                            new Random().nextInt(100),
+                            new Random().nextInt(100),
+                            new Random().nextInt(100),
+                            new Random().nextInt(100)
+                    };
+                    ratingReviews.createRatingBars(100, BarLabels.STYPE1, colors, raters);
 
                     LinearLayout vComments = view.findViewById(R.id.ll_comments);
                     for (int i = 0; i < 2; i++)
@@ -101,6 +123,11 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
                     layoutParams.gravity = Gravity.CENTER_VERTICAL;
                     view.setLayoutParams(layoutParams);
                     csProperties.addView(view);
+
+                    txtDesc = view.findViewById(R.id.showDesc);
+                    txtMore = view.findViewById(R.id.txtMore);
+                    txtMore.setOnClickListener(DetailsActivity.this);
+
                 }
             }
 
@@ -133,30 +160,6 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
         recyclerView2.setHasFixedSize(true);
         recyclerView2.setAdapter(new productAdapter(DummyContent.ITEMS));
 
-        /*RecyclerView recyclerView3 = findViewById(R.id.rv_price);
-        recyclerView3.setLayoutManager(new *//*RTL*//*LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
-        recyclerView3.setHasFixedSize(true);
-        recyclerView3.setAdapter(new priceAdapter(this, DummyContent.ITEMS));*/
-
-        /*RatingReviews ratingReviews = findViewById(R.id.rating_reviews);
-
-        int colors[] = new int[]{
-                Color.parseColor("#0e9d58"),
-                Color.parseColor("#bfd047"),
-                Color.parseColor("#ffc105"),
-                Color.parseColor("#ef7e14"),
-                Color.parseColor("#d36259")};
-
-        int raters[] = new int[]{
-                new Random().nextInt(100),
-                new Random().nextInt(100),
-                new Random().nextInt(100),
-                new Random().nextInt(100),
-                new Random().nextInt(100)
-        };
-
-        ratingReviews.createRatingBars(100, BarLabels.STYPE1, colors, raters);*/
-
     }
 
 
@@ -187,7 +190,7 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
 
     @Override
     public void onClick(View v) {
-        /*if (txtMore.getText().equals("ادامه مطلب")) {
+        if (txtMore.getText().equals("ادامه مطلب")) {
             try {
                 txtDesc.expand();
                 txtMore.setText("بستن");
@@ -198,6 +201,6 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
         } else {
             txtDesc.collapse();
             txtMore.setText("ادامه مطلب");
-        }*/
+        }
     }
 }
