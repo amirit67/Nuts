@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:layoutDirection="ltr"
-    android:paddingRight="10dp"
+    android:paddingBottom="8dp"
     android:background="@drawable/rounded_gray_comment">
 
 
@@ -22,9 +22,10 @@
 
 
     <com.example.nuts.utils.properratingbar.ProperRatingBar
+        style="?android:attr/rating"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="?android:attr/rating"
+        android:layout_marginStart="8dp"
         android:background="@android:color/transparent"
         android:max="100"
         android:numStars="5"
@@ -32,7 +33,6 @@
         android:stepSize="1.0"
         android:theme="@style/RatingBarfeed"
         app:layout_constraintBottom_toBottomOf="@+id/txt_name"
-        app:layout_constraintEnd_toStartOf="@+id/txt_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_name"
         app:prb_tickNormalDrawable="@drawable/ic_star_empty"
@@ -46,6 +46,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:padding="8dp"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:fontFamily="@font/iransanslight"
@@ -53,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView46"
-        tools:text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و بتفاده از طراحان گرافیک است" />
+        android:text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و بتفاده از طراحان گرافیک است" />
 
     <TextView
         android:id="@+id/txt_name"
@@ -61,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        tools:text="میلاد افشین"
+        android:text="میلاد افشین"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="12sp"

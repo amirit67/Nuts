@@ -42,7 +42,7 @@ public class priceAdapter extends RecyclerView.Adapter<priceAdapter.ViewHolder> 
         if (position == 0) {
             holder.txtWeight.setTextColor(Color.BLACK);
             holder.txtPrice.setTextColor(Color.BLACK);
-            holder.itemView.setBackground(context.getResources().getDrawable(R.drawable.rounded_orange_price));
+            holder.itemView.setBackground(context.getResources().getDrawable(R.drawable.rounded_register_comment));
         }
     }
 
