@@ -37,7 +37,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class DetailsActivity extends AppCompatActivity implements C1770b, View.OnClickListener {
 
-    public TextView txtMore, txt_bargain;
+    public TextView txtMore, txt_bargain, txt_major_shopping;
     public ExpandableTextView txtDesc;
 
     public TabLayout tabLayout;
@@ -167,6 +167,9 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
         txt_bargain = findViewById(R.id.txt_bargain);
         txt_bargain.setOnClickListener(this);
 
+        txt_major_shopping = findViewById(R.id.txt_major_shopping);
+        txt_major_shopping.setOnClickListener(this);
+
     }
 
 
@@ -217,6 +220,17 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
                     dialog.show();
                 }
             });
+
+            dialog.show();
+        }
+
+        if(v.getId() == R.id.txt_major_shopping)
+        {
+            Dialog dialog = new Dialog(this);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog.setCancelable(true);
+            dialog.setContentView(R.layout.dialog_major_shopping);
 
             dialog.show();
         }
