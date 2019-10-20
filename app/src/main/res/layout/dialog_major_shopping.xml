@@ -106,7 +106,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/rounded_major_shopping_price_on"
+            android:background="@drawable/rounded_major_shopping_on"
             android:gravity="center"
             android:padding="8dp"
             android:text="ارسال نمونه"
@@ -133,6 +133,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:paddingRight="32dp"
+            android:paddingLeft="32dp"
             app:layout_constraintTop_toBottomOf="@+id/textView17"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -142,9 +144,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:padding="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                 android:layout_margin="8dp"
-                android:background="@drawable/rounded_major_shopping_price_off">
+                android:background="@drawable/rounded_major_shopping_off">
 
                 <TextView
                     android:id="@+id/textView60"
@@ -172,9 +175,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:padding="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                 android:layout_margin="8dp"
-                android:background="@drawable/rounded_major_shopping_price_off">
+                android:background="@drawable/rounded_major_shopping_on">
 
                 <TextView
                     android:id="@+id/textView56"
@@ -202,6 +206,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:paddingRight="32dp"
+            android:paddingLeft="32dp"
             app:layout_constraintTop_toBottomOf="@+id/linear18">
 
             <LinearLayout
@@ -209,9 +215,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:padding="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                 android:layout_margin="8dp"
-                android:background="@drawable/rounded_major_shopping_price_off">
+                android:background="@drawable/rounded_major_shopping_off">
 
                 <TextView
                     android:id="@+id/textView63"
@@ -238,9 +245,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:padding="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
                 android:layout_margin="8dp"
-                android:background="@drawable/rounded_major_shopping_price_off">
+                android:background="@drawable/rounded_major_shopping_off">
 
                 <TextView
                     android:id="@+id/textView54"
