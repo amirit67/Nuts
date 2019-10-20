@@ -1,7 +1,10 @@
 package com.example.nuts;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -9,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,7 +39,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class DetailsActivity extends AppCompatActivity implements C1770b, View.OnClickListener {
 
-    public TextView txtMore;
+    public TextView txtMore, txtMajorShopping;
     public ExpandableTextView txtDesc;
 
     public TabLayout tabLayout;
@@ -160,6 +164,11 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
         recyclerView2.setHasFixedSize(true);
         recyclerView2.setAdapter(new productAdapter(DummyContent.ITEMS));
 
+
+
+        txtMajorShopping = findViewById(R.id.txt_major_shopping);
+        txtMajorShopping.setOnClickListener(this);
+
     }
 
 
@@ -190,6 +199,29 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
 
     @Override
     public void onClick(View v) {
+        if(v.getId() == R.id.txt_major_shopping)
+        {
+            Dialog dialog = new Dialog(this);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog.setCancelable(true);
+            dialog.setContentView(R.layout.dialog_major_shopping);
+
+            TextView isAccept = dialog.findViewById(R.id.txt_is_accept);
+            isAccept.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Dialog dialog = new Dialog(DetailsActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    dialog.setCancelable(true);
+                    dialog.setContentView(R.layout.dialog_major_shopping_accept);
+                    dialog.show();
+                }
+            });
+
+            dialog.show();
+        }
         if (txtMore.getText().equals("ادامه مطلب")) {
             try {
                 txtDesc.expand();
