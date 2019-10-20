@@ -2,7 +2,6 @@ package com.example.nuts;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -18,7 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nuts.adapter.SliderAdapter;
-import com.example.nuts.adapter.priceAdapter;
 import com.example.nuts.adapter.productAdapter;
 import com.example.nuts.utils.ExpandableTextView;
 import com.example.nuts.utils.navigation.C1769a;
@@ -205,7 +203,7 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.setCancelable(true);
-            dialog.setContentView(R.layout.dialog_major_shopping);
+            dialog.setContentView(R.layout.dialog_bargain);
 
             TextView isAccept = dialog.findViewById(R.id.txt_is_accept);
             isAccept.setOnClickListener(new View.OnClickListener() {
@@ -215,7 +213,7 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                     dialog.setCancelable(true);
-                    dialog.setContentView(R.layout.dialog_major_shopping_accept);
+                    dialog.setContentView(R.layout.dialog_bargain_accept);
                     dialog.show();
                 }
             });
