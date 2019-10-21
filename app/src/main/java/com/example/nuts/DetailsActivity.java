@@ -230,7 +230,7 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.setCancelable(true);
-            dialog.setContentView(R.layout.dialog_major_shopping);
+            dialog.setContentView(R.layout.dialog_major_shopping2);
 
             dialog.show();
         }
