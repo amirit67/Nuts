@@ -11,12 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|end"
+        android:fontFamily="@font/iransansmedium"
+        android:gravity="center"
         android:paddingStart="2dp"
         android:paddingLeft="2dp"
-        android:gravity="center"
         android:textColor="#333333"
-        android:textSize="10sp"
-        android:fontFamily="@font/iransansmedium" />
+        android:textSize="10sp" />
 
     <LinearLayout
         android:id="@+id/linear_bar"
@@ -30,9 +30,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/iransansmedium"
         android:paddingStart="2dp"
         android:paddingLeft="2dp"
-        android:fontFamily="@font/iransansmedium"
         android:textColor="#333333"
         android:textSize="10sp" />
 </LinearLayout>

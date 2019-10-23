@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:state_checked="true" android:drawable="@drawable/rounded_major_shopping_on" />
-    <item android:state_checked="false" android:drawable="@drawable/rounded_major_shopping_off" />
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rounded_major_shopping_on" android:state_checked="true" />
+    <item android:drawable="@drawable/rounded_major_shopping_off" android:state_checked="false" />
 
     <!--<item android:state_checked="true" android:drawable="@drawable/radio_slected_outlined" />
     <item android:state_checked="false" android:drawable="@drawable/back_22" />-->

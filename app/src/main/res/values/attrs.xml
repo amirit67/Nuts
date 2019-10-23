@@ -53,71 +53,52 @@
     </declare-styleable>
 
 
-
-
     <declare-styleable name="ShadowLayout">
-        <attr name="sl_shadowed" format="boolean"/>
-        <attr name="sl_shadow_distance" format="dimension"/>
-        <attr name="sl_shadow_angle" format="integer"/>
-        <attr name="sl_shadow_radius" format="dimension"/>
-        <attr name="sl_shadow_color" format="color"/>
+        <attr name="sl_shadowed" format="boolean" />
+        <attr name="sl_shadow_distance" format="dimension" />
+        <attr name="sl_shadow_angle" format="integer" />
+        <attr name="sl_shadow_radius" format="dimension" />
+        <attr name="sl_shadow_color" format="color" />
     </declare-styleable>
 
 
     <declare-styleable name="ShadowView">
-        <attr name="android:foreground"/>
-        <attr name="shadowMargin" format="dimension"/>
-        <attr name="shadowMarginTop" format="dimension"/>
-        <attr name="shadowMarginLeft" format="dimension"/>
-        <attr name="shadowMarginRight" format="dimension"/>
-        <attr name="shadowMarginBottom" format="dimension"/>
-        <attr name="cornerRadius" format="dimension"/>
-        <attr name="cornerRadiusTL" format="dimension"/>
-        <attr name="cornerRadiusTR" format="dimension"/>
-        <attr name="cornerRadiusBL" format="dimension"/>
-        <attr name="cornerRadiusBR" format="dimension"/>
-        <attr name="foregroundColor" format="color"/>
-        <attr name="shadowColor" format="color"/>
-        <attr name="shadowDx" format="float"/>
-        <attr name="shadowDy" format="float"/>
-        <attr name="shadowRadius" format="dimension"/>
-        <attr name="backgroundColor" format="color"/>
+        <attr name="android:foreground" />
+        <attr name="shadowMargin" format="dimension" />
+        <attr name="shadowMarginTop" format="dimension" />
+        <attr name="shadowMarginLeft" format="dimension" />
+        <attr name="shadowMarginRight" format="dimension" />
+        <attr name="shadowMarginBottom" format="dimension" />
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="cornerRadiusTL" format="dimension" />
+        <attr name="cornerRadiusTR" format="dimension" />
+        <attr name="cornerRadiusBL" format="dimension" />
+        <attr name="cornerRadiusBR" format="dimension" />
+        <attr name="foregroundColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowDx" format="float" />
+        <attr name="shadowDy" format="float" />
+        <attr name="shadowRadius" format="dimension" />
+        <attr name="backgroundColor" format="color" />
     </declare-styleable>
     <declare-styleable name="ShadowView_Layout">
         <attr name="layout_gravity">
-            <flag name="top"
-                value="0x30"/>
-            <flag name="bottom"
-                value="0x50"/>
-            <flag name="left"
-                value="0x03"/>
-            <flag name="right"
-                value="0x05"/>
-            <flag name="center_vertical"
-                value="0x10"/>
-            <flag name="fill_vertical"
-                value="0x70"/>
-            <flag name="center_horizontal"
-                value="0x01"/>
-            <flag name="fill_horizontal"
-                value="0x07"/>
-            <flag name="center"
-                value="0x11"/>
-            <flag name="fill"
-                value="0x77"/>
-            <flag name="clip_vertical"
-                value="0x80"/>
-            <flag name="clip_horizontal"
-                value="0x08"/>
-            <flag name="start"
-                value="0x00800003"/>
-            <flag name="end"
-                value="0x00800005"/>
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="fill_vertical" value="0x70" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="fill_horizontal" value="0x07" />
+            <flag name="center" value="0x11" />
+            <flag name="fill" value="0x77" />
+            <flag name="clip_vertical" value="0x80" />
+            <flag name="clip_horizontal" value="0x08" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
         </attr>
     </declare-styleable>
-
-
-
 
 
     <declare-styleable name="ExpandableTextView">
@@ -148,7 +129,6 @@
     </declare-styleable>
 
 
-
     <declare-styleable name="RatingReviews">
 
         <attr name="style" format="enum">
@@ -157,7 +137,7 @@
         </attr>
 
         <attr name="color" format="color" />
-        <attr name="rounded" format="boolean"/>
+        <attr name="rounded" format="boolean" />
         <attr name="gradiant" format="integer" />
         <attr name="width" format="dimension" />
         <attr name="text_size" format="dimension" />
@@ -198,7 +178,6 @@
             <enum name="mirror" value="2" />
         </attr>
     </declare-styleable>
-
 
 
     <declare-styleable name="ProperRatingBar">

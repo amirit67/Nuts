@@ -31,17 +31,17 @@
                 android:elevation="0dp"
                 android:minHeight="?attr/actionBarSize"
                 app:elevation="0dp"
+                app:tabBackground="@drawable/tab_color_selector"
                 app:tabGravity="fill"
                 app:tabIndicatorColor="@color/white"
                 app:tabIndicatorHeight="0dp"
                 app:tabMaxWidth="0dp"
-                app:tabMode="scrollable"
-                app:tabSelectedTextColor="@color/white"
-                app:tabTextColor="@color/Gray100"
-                app:tabTextAppearance="@style/CustomTabLayout"
-                app:tabBackground="@drawable/tab_color_selector"
                 app:tabMinWidth="125dp"
-                app:tabRippleColor="#1A1169EE"/>
+                app:tabMode="scrollable"
+                app:tabRippleColor="#1A1169EE"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@style/CustomTabLayout"
+                app:tabTextColor="@color/Gray100" />
 
             <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/toolbar_top"

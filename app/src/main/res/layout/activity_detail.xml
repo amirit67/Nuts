@@ -90,15 +90,15 @@
             android:background="#ececec">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardView3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/cardView3"
                 android:layout_marginTop="16dp"
                 android:ambientShadowAlpha="1"
+                android:background="@mipmap/shadow"
                 android:outlineAmbientShadowColor="@color/colorAccent"
                 android:outlineSpotShadowColor="@color/colorAccent"
                 android:spotShadowAlpha="1"
-                android:background="@mipmap/shadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -296,9 +296,9 @@
                 tools:listitem="@layout/item_home_category" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardView4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/cardView4"
                 android:background="@mipmap/shadow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

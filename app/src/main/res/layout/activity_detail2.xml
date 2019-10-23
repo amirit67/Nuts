@@ -141,21 +141,21 @@
                     app:sliderIndicatorSelectedColor="#5A5A5A"
                     app:sliderIndicatorUnselectedColor="#FFF"
                     app:sliderScrollTimeInSec="1"
-                    app:sliderStartAutoCycle="true" >
+                    app:sliderStartAutoCycle="true">
 
                     <TextView
                         android:id="@+id/textView53"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="30% تخفیف"
-                        android:textColor="@color/white"
-                        android:textSize="12sp"
+                        android:layout_gravity="right"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/rounded_red"
                         android:gravity="center"
                         android:paddingLeft="12dp"
                         android:paddingRight="12dp"
-                        android:background="@drawable/rounded_red"
-                        android:layout_gravity="right"
-                        android:layout_margin="8dp"/>
+                        android:text="30% تخفیف"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
                 </com.smarteist.autoimageslider.SliderView>
 
                 <ImageView
@@ -343,8 +343,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_marginStart="16dp"
-                    android:text="کیلوگرم"
                     android:gravity="center"
+                    android:text="کیلوگرم"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

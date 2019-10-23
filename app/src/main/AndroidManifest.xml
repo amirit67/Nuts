@@ -12,13 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
         <activity
             android:name=".ActivityFilterCategory"
             android:screenOrientation="portrait"
-            android:theme="@style/MyMaterialTheme"></activity>
+            android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name=".DetailsActivity"
+            android:name=".ChatActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">

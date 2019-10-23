@@ -4,10 +4,10 @@
     android:id="@+id/rl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="true"
     android:layoutDirection="ltr"
     android:orientation="vertical"
-    android:fillViewport="true"
-    android:clipToPadding="false"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <androidx.viewpager.widget.ViewPager

@@ -21,8 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:foregroundGravity="center_vertical"
             android:elevation="0dp"
+            android:foregroundGravity="center_vertical"
             app:layout_scrollFlags="scroll|enterAlways">
 
             <androidx.appcompat.widget.Toolbar
@@ -44,9 +44,9 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_logo"
+                    android:layout_gravity="center"
                     android:layoutDirection="ltr"
-                    android:layout_gravity="center"/>
+                    android:src="@drawable/ic_logo" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -57,8 +57,8 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
         android:background="#f8f8f8"
+        android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,9 +78,9 @@
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginRight="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginRight="24dp"
                 android:background="@mipmap/shadow"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
@@ -240,9 +240,9 @@
                     android:id="@+id/instant_delivery"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
                     android:background="@mipmap/shadow"
                     app:layout_constraintEnd_toStartOf="@+id/lowest_price"
                     app:layout_constraintStart_toStartOf="parent"

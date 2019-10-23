@@ -57,12 +57,13 @@
         <item name="android:fontFamily">@font/iransansmedium</item>
     </style>
 
-    <style name="CustomTabLayout"  parent="@android:style/TextAppearance.Small">
+    <style name="CustomTabLayout" parent="@android:style/TextAppearance.Small">
 
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">bold</item>
 
     </style>
+
     <style name="CustomTabLayout1" parent="Widget.Design.TabLayout">
         <item name="tabBackground">@drawable/tab_color_selector</item>
     </style>
