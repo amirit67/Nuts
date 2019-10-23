@@ -89,7 +89,6 @@
         android:fadingEdgeLength="5dp"
         android:gravity="right"
         android:headerDividersEnabled="false"
-        android:layoutDirection="rtl"
         android:listSelector="@android:color/transparent"
         android:nestedScrollingEnabled="false"
         android:orientation="vertical"
