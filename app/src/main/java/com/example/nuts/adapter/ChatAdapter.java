@@ -1,9 +1,11 @@
 package com.example.nuts.adapter;
 
 
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,7 +16,7 @@ import com.example.nuts.R;
 import java.util.List;
 
 
-public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatHolder> {
+public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private final int VIEW_TYPE_DEPOSITE = 1;
     private final int VIEW_TYPE_REMOVAL = 2;
@@ -26,9 +28,13 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatHolder> {
     }
 
     @Override
-    public ChatHolder onCreateViewHolder(ViewGroup viewGroup, final int i) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, final int i) {
 
-        if (i == VIEW_TYPE_DEPOSITE) {
+        if (i == 0) {
+            View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_product, null);
+            return new ProductHolder(v);
+        }
+        else if (i == VIEW_TYPE_DEPOSITE) {
             View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_msg_buyer, null);
             return new ChatHolder(v);
         } else if (i == VIEW_TYPE_REMOVAL) {
@@ -42,7 +48,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatHolder> {
 
     @Override
     public int getItemViewType(int position) {
-        if (mValues.get(position) == null)
+        if(position == 0)
+            return 0;
+        else if (mValues.get(position) == null)
             return VIEW_TYPE_LOADING;
         else if (position % 2 == 0)
             return VIEW_TYPE_DEPOSITE;
@@ -51,11 +59,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatHolder> {
     }
 
     @Override
-    public void onBindViewHolder(final ChatHolder holder, final int i) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int i) {
 
-        if (holder instanceof ChatHolder) {
-            holder.txtMsg.setText(mValues.get(i).details);
-            holder.txtDate.setText(mValues.get(i).content);
+        if(i == 0)
+        {
+            ProductHolder Holder = (ProductHolder) holder;
+        }
+        else if (holder instanceof ChatHolder) {
+            ChatHolder Holder = (ChatHolder) holder;
+            Holder.txtMsg.setText(mValues.get(i).details);
+            Holder.txtDate.setText(mValues.get(i).content);
         }
     }
 
@@ -72,6 +85,19 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatHolder> {
             super(view);
             this.txtMsg = view.findViewById(R.id.txt_msg);
             this.txtDate = view.findViewById(R.id.txt_date);
+        }
+    }
+
+    public class ProductHolder extends RecyclerView.ViewHolder {
+        public TextView txtTitle,txtPrice, txtAddToBasket;
+        public ImageView imgProduct;
+
+        public ProductHolder(View view) {
+            super(view);
+            this.imgProduct = view.findViewById(R.id.img_product);
+            this.txtTitle = view.findViewById(R.id.txt_title);
+            this.txtPrice = view.findViewById(R.id.txt_price);
+            this.txtAddToBasket = view.findViewById(R.id.txt_add_to_basket);
         }
     }
 
