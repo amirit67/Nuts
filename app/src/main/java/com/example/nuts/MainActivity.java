@@ -15,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.nuts.eventBus.ShowNavigationEvent;
 import com.example.nuts.eventBus.ShowToolbarEvent;
+import com.example.nuts.fragments.FragmentCategories;
 import com.example.nuts.fragments.MainFragment;
 import com.example.nuts.utils.navigation.C1769a;
 import com.example.nuts.utils.navigation.C1770b;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements C1770b {
             @Override
             public void run() {
                 FragmentStack stack = new FragmentStack(MainActivity.this, getSupportFragmentManager(), R.id.container);
-                stack.replace(new MainFragment());
+                stack.replace(new FragmentCategories());
             }
         }, 100);
 

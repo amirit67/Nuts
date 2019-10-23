@@ -59,7 +59,7 @@
                 app:cardElevation="0dp">
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/txt_advance_search"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:drawableLeft="@drawable/ic_search_advance"

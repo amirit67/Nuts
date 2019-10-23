@@ -1,10 +1,16 @@
 package com.example.nuts.fragments;
 
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,6 +39,28 @@ public class FragmentCategories extends Fragment implements View.OnClickListener
 
         rv.setHasFixedSize(true);
         rv.setAdapter(new FilterAdapter(DummyContent.ITEMS));
+
+
+        rootView.findViewById(R.id.txt_advance_search).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog dialog = new Dialog(getActivity());
+                Window window = dialog.getWindow();
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.setCancelable(true);
+                dialog.setContentView(R.layout.dialog_advane_search);
+
+                ViewGroup.LayoutParams params = window.getAttributes();
+                window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+                params.width = WindowManager.LayoutParams.MATCH_PARENT;
+                params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                window.setAttributes((WindowManager.LayoutParams) params);
+                window.setGravity(Gravity.CENTER);
+
+                dialog.show();
+            }
+        });
     }
 
     @Override
