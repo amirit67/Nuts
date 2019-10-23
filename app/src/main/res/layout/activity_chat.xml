@@ -74,7 +74,6 @@
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -84,6 +83,8 @@
         android:background="#E5E5E5"
         android:divider="@null"
         android:dividerHeight="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:listSelector="@android:color/transparent"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout6"

@@ -2,10 +2,12 @@ package com.example.nuts.adapter;
 
 
 import android.media.Image;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,7 +31,6 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, final int i) {
-
         if (i == 0) {
             View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_product, null);
             return new ProductHolder(v);
@@ -60,6 +61,16 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int i) {
+
+        LinearLayout.LayoutParams paramsMsg = new LinearLayout.
+                LayoutParams(android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
+                android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
+        if (i%2 == 0){
+            paramsMsg.gravity = Gravity.START;
+        } else {
+            paramsMsg.gravity = Gravity.END;
+        }
+
 
         if(i == 0)
         {
