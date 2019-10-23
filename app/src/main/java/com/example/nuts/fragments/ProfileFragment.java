@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.nuts.R;
-
 import androidx.fragment.app.Fragment;
+
+import com.example.nuts.R;
 
 /**
  * A simple {@link Fragment} subclass.

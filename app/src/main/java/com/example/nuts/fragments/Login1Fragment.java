@@ -6,12 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+
 import com.example.nuts.FragmentStack;
 import com.example.nuts.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-
-import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.

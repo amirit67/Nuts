@@ -8,12 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.nuts.DummyContent;
 import com.example.nuts.R;
 
 import java.util.List;
-
-import androidx.recyclerview.widget.RecyclerView;
 
 
 public class priceAdapter extends RecyclerView.Adapter<priceAdapter.ViewHolder> {

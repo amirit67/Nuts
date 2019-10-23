@@ -1,13 +1,12 @@
 package com.example.nuts;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
 import com.example.nuts.adapter.ChatAdapter;
-import com.example.nuts.adapter.addressAdapter;
 import com.example.nuts.utils.navigation.ItemDecorationAlbumColumns2;
 
 public class ChatActivity extends AppCompatActivity {

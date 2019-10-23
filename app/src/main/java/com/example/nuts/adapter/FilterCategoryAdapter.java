@@ -1,27 +1,23 @@
 package com.example.nuts.adapter;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.nuts.BuildConfig;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.nuts.DummyContent;
 import com.example.nuts.R;
 
 import java.util.List;
-
-import androidx.recyclerview.widget.RecyclerView;
 
 
 public class FilterCategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private final int VIEW_TYPE_ITEM = 1;
     private List<DummyContent.DummyItem> feedItemList;
-   // private Context mContext;
+    // private Context mContext;
     //private int position;
 
     public FilterCategoryAdapter(/*Context context, */List<DummyContent.DummyItem> feedItemList/*, int pos*/) {

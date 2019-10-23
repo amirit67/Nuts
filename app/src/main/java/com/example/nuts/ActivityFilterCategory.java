@@ -1,42 +1,30 @@
 package com.example.nuts;
 
 
-import android.app.AlertDialog;
-import android.app.AppComponentFactory;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
 
-import com.example.nuts.adapter.FilterAdapter;
-import com.example.nuts.adapter.FilterCategoryAdapter;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import com.example.nuts.fragments.SubCategoryFragment;
-import com.example.nuts.utils.navigation.ItemDecorationAlbumColumns2;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-import androidx.viewpager.widget.ViewPager;
-
 public class ActivityFilterCategory extends AppCompatActivity {
 
-    private  List<DummyContent.DummyItem> feed = new ArrayList<>();
+    private static Dialog dialog;
+    private List<DummyContent.DummyItem> feed = new ArrayList<>();
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
     private TabLayout tabLayout;
-    private static Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +55,7 @@ public class ActivityFilterCategory extends AppCompatActivity {
 
         List<DummyContent.DummyItem> feed;
 
-        public SectionsPagerAdapter(FragmentManager fm,  List<DummyContent.DummyItem> feed) {
+        public SectionsPagerAdapter(FragmentManager fm, List<DummyContent.DummyItem> feed) {
             super(fm);
             this.feed = feed;
         }

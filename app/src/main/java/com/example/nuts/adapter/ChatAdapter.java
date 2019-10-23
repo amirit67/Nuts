@@ -1,7 +1,6 @@
 package com.example.nuts.adapter;
 
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,8 +31,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatHolder> {
         if (i == VIEW_TYPE_DEPOSITE) {
             View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_msg_buyer, null);
             return new ChatHolder(v);
-        }
-        else if (i == VIEW_TYPE_REMOVAL) {
+        } else if (i == VIEW_TYPE_REMOVAL) {
             View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_msg_seller, null);
             return new ChatHolder(view);
         }
@@ -46,7 +44,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatHolder> {
     public int getItemViewType(int position) {
         if (mValues.get(position) == null)
             return VIEW_TYPE_LOADING;
-        else if (position%2 == 0)
+        else if (position % 2 == 0)
             return VIEW_TYPE_DEPOSITE;
         else
             return VIEW_TYPE_REMOVAL;

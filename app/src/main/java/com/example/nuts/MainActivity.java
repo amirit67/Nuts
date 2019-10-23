@@ -16,7 +16,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.example.nuts.eventBus.ShowNavigationEvent;
 import com.example.nuts.eventBus.ShowToolbarEvent;
 import com.example.nuts.fragments.MainFragment;
-import com.example.nuts.fragments.ProfileFragment;
 import com.example.nuts.utils.navigation.C1769a;
 import com.example.nuts.utils.navigation.C1770b;
 

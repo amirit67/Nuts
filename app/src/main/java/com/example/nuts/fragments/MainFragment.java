@@ -7,6 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.nuts.DummyContent;
 import com.example.nuts.R;
 import com.example.nuts.adapter.SliderAdapter;
@@ -14,18 +20,11 @@ import com.example.nuts.adapter.categoryAdapter;
 import com.example.nuts.adapter.productAdapter;
 import com.example.nuts.eventBus.ShowNavigationEvent;
 import com.example.nuts.eventBus.ShowToolbarEvent;
-import com.example.nuts.utils.RecyclerSnapHelper;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
 import org.greenrobot.eventbus.EventBus;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * A simple {@link Fragment} subclass.

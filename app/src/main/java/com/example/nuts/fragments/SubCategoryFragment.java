@@ -11,17 +11,15 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.example.nuts.ActivityFilterCategory;
-import com.example.nuts.DummyContent;
-import com.example.nuts.R;
-import com.example.nuts.adapter.FilterCategoryAdapter;
-import com.example.nuts.adapter.addressAdapter;
-import com.example.nuts.utils.navigation.ItemDecorationAlbumColumns2;
-
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
+import com.example.nuts.DummyContent;
+import com.example.nuts.R;
+import com.example.nuts.adapter.FilterCategoryAdapter;
+import com.example.nuts.utils.navigation.ItemDecorationAlbumColumns2;
 
 public class SubCategoryFragment extends Fragment implements View.OnClickListener {
 

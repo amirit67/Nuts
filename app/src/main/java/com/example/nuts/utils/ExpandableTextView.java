@@ -7,7 +7,6 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -124,9 +123,9 @@ public class ExpandableTextView extends LinearLayout {
     }
 
     public void toggle() {
-        if (moreLess.getText().equals(getResources().getString(R.string.more))){
+        if (moreLess.getText().equals(getResources().getString(R.string.more))) {
             toggle(true);
-        } else{
+        } else {
             toggle(false);
         }
     }
@@ -290,15 +289,6 @@ public class ExpandableTextView extends LinearLayout {
     }
 
     /**
-     * Sets the duration of the expand / collapse animation.
-     *
-     * @param animationDuration duration in milliseconds.
-     */
-    public void setAnimationDuration(final long animationDuration) {
-        this.animationDuration = animationDuration;
-    }
-
-    /**
      * Sets a {@link TimeInterpolator} for expanding and collapsing.
      *
      * @param interpolator the interpolator
@@ -326,10 +316,9 @@ public class ExpandableTextView extends LinearLayout {
         this.collapseInterpolator = collapseInterpolator;
     }
 
-
     /**
      * Options
-     * */
+     */
     public boolean isMoreLessShow() {
         return moreLessShow;
     }
@@ -347,6 +336,15 @@ public class ExpandableTextView extends LinearLayout {
         return animationDuration;
     }
 
+    /**
+     * Sets the duration of the expand / collapse animation.
+     *
+     * @param animationDuration duration in milliseconds.
+     */
+    public void setAnimationDuration(final long animationDuration) {
+        this.animationDuration = animationDuration;
+    }
+
     public int getMoreLessGravity() {
         return moreLessGravity;
     }
@@ -354,7 +352,7 @@ public class ExpandableTextView extends LinearLayout {
     public void setMoreLessGravity(int moreLessGravity) {
         int i = Gravity.LEFT;
         this.moreLessGravity = moreLessGravity;
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         if (moreLessGravity != Gravity.LEFT) {
             i = Gravity.RIGHT;
         }
@@ -366,17 +364,17 @@ public class ExpandableTextView extends LinearLayout {
         return moreLessTextStyle;
     }
 
+    public void setMoreLessTextStyle(int textStyle) {
+        moreLessTextStyle = textStyle;
+        applyMoreLessStyle();
+    }
+
     private void applyMoreLessStyle() {
         //moreLess.setTypeface(null, moreLessTextStyle);
     }
 
     private void applyStyle() {
         //content.setTypeface(null, contentTextStyle);
-    }
-
-    public void setMoreLessTextStyle(int textStyle) {
-        moreLessTextStyle = textStyle;
-        applyMoreLessStyle();
     }
 
     public int getContentTextStyle() {

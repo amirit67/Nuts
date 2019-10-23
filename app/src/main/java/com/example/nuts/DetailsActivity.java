@@ -16,6 +16,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.nuts.adapter.SliderAdapter;
 import com.example.nuts.adapter.productAdapter;
 import com.example.nuts.utils.ExpandableTextView;
@@ -29,11 +34,6 @@ import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
 import java.util.Random;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class DetailsActivity extends AppCompatActivity implements C1770b, View.OnClickListener {
 
@@ -85,8 +85,7 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
                     ratingReviews.createRatingBars(100, BarLabels.STYPE1, colors, raters);
 
                     LinearLayout vComments = view.findViewById(R.id.ll_comments);
-                    for (int i = 0; i < 2; i++)
-                    {
+                    for (int i = 0; i < 2; i++) {
                         view = inflater.inflate(R.layout.item_comment, null);
                         layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                         layoutParams.weight = 5f;
@@ -106,13 +105,11 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
                     LinearLayout vSpecifications = view.findViewById(R.id.ll_specifications);
                     LinearLayout vDescription = view.findViewById(R.id.ll_description);
 
-                    for (int i = 0; i < 2; i++)
-                    {
+                    for (int i = 0; i < 2; i++) {
                         view = inflater.inflate(R.layout.item_detail_product, null);
                         vSpecifications.addView(view);
                     }
-                    for (int i = 0; i < 2; i++)
-                    {
+                    for (int i = 0; i < 2; i++) {
                         view = inflater.inflate(R.layout.item_detail_product, null);
                         vDescription.addView(view);
                     }
@@ -163,7 +160,6 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
         recyclerView2.setAdapter(new productAdapter(DummyContent.ITEMS));
 
 
-
         txt_bargain = findViewById(R.id.txt_bargain);
         txt_bargain.setOnClickListener(this);
 
@@ -200,8 +196,7 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.txt_bargain)
-        {
+        if (v.getId() == R.id.txt_bargain) {
             Dialog dialog = new Dialog(this);
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -224,8 +219,7 @@ public class DetailsActivity extends AppCompatActivity implements C1770b, View.O
             dialog.show();
         }
 
-        if(v.getId() == R.id.txt_major_shopping)
-        {
+        if (v.getId() == R.id.txt_major_shopping) {
             Dialog dialog = new Dialog(this);
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
