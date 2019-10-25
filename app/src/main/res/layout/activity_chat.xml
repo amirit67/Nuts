@@ -210,7 +210,7 @@
             android:background="@drawable/rounded_gray_stroke"
             android:hint="ارسال پیام"
             android:orientation="horizontal"
-            android:paddingRight="8dp"
+            android:paddingRight="12dp"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
