@@ -207,7 +207,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="4dp"
-            android:background="@drawable/rounded_gray_count"
+            android:background="@drawable/rounded_gray_stroke"
             android:hint="ارسال پیام"
             android:orientation="horizontal"
             android:paddingRight="8dp"
