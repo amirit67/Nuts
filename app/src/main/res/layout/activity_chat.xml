@@ -84,7 +84,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/app_bar">
 
                     <ImageView
-                        android:id="@+id/imageView17"
+                        android:id="@+id/img_call"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_marginStart="16dp"
@@ -94,17 +94,17 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/imageView18"
+                        android:id="@+id/img_share"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_marginStart="12dp"
                         android:src="@drawable/ic_share_2"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageView17"
+                        app:layout_constraintStart_toEndOf="@+id/img_call"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/imageView19"
+                        android:id="@+id/img_seller"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="8dp"
@@ -116,7 +116,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView66"
+                        android:id="@+id/txt_seller_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -124,12 +124,12 @@
                         android:text="محسن خدایی"
                         android:textColor="@color/black"
                         android:textSize="13sp"
-                        app:layout_constraintBottom_toTopOf="@+id/textView67"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView19"
+                        app:layout_constraintBottom_toTopOf="@+id/txt_position"
+                        app:layout_constraintEnd_toStartOf="@+id/img_seller"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView67"
+                        android:id="@+id/txt_position"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
@@ -138,17 +138,17 @@
                         android:textColor="#868686"
                         android:textSize="10sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView19"
-                        app:layout_constraintTop_toBottomOf="@+id/textView66" />
+                        app:layout_constraintEnd_toStartOf="@+id/img_seller"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_seller_name" />
 
                     <ImageView
-                        android:id="@+id/imageView20"
+                        android:id="@+id/img_bookmark"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_marginStart="12dp"
                         android:src="@drawable/ic_bookmark2"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageView18"
+                        app:layout_constraintStart_toEndOf="@+id/img_share"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
